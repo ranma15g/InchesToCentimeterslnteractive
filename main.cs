@@ -29,18 +29,22 @@ class Program
           const double CENTIMETERS_PER_INCH = 2.54;
 
                 
-          /* We created the int number to be used as a test 
+          /* We created the int int_test to be used as a test 
              on the parse to ensure the user entered a whole 
              number */
-          int number;
-        
-          /* if we did follow instruction and use an integer to be the thing
-              we test against for our test Units */
-          if (int.TryParse(inches, out number))
+          int int_test;
+
+
+          /* Here we are parsing the input to make sure it fits
+             the criteria of an int and not a string. if we did 
+             follow instruction and use an integer to be the thing
+             we test against for our test Units, it will perform 
+             this code */
+          if (int.TryParse(inches, out int_test))
           {
 
             /* Here is where we convert inches to centimeters */
-            double centimeters = number * CENTIMETERS_PER_INCH;
+            double centimeters = int_test * CENTIMETERS_PER_INCH;
               /* we implicitly type cased number which is an integer and not
                  inches because that was recorded as a string. */
 
